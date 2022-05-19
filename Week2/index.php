@@ -12,6 +12,8 @@
     </head>
     <body>
         
+        <?php include ('nav.php'); ?>
+        
         
         <form action="index.php" method="get"> 
             <label>First name: </label> 

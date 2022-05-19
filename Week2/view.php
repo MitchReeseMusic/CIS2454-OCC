@@ -24,6 +24,19 @@
     
     // integer division
     $interger_quotient = intdiv(7, 2);
+    
+    $output = "";
+    
+            
+        $counter = 1;
+        while ($counter < 10){
+            $output .= "</br> $counter";
+            $counter++;
+        }
+        
+        for( $index = 0; $index < 10; $index++ ){
+            $output .= "</br> $index";
+        }
 ?>
 
    
@@ -36,6 +49,8 @@
         <title></title>
     </head>
     <body>
+        
+         <?php include ('nava.php'); ?>
                 
         <?php
         echo "Hi $first_name $last_name";
@@ -45,6 +60,21 @@
         echo "$name is awesome: $is_awesome";
         echo "</br>";
         echo "7 / 2 is: " . ( 7 / 2 );
+        
+        if ( $first_name == "Eric" ){
+            echo " Hi Eric!";
+        } else {
+            echo " You aren't Eric";
+        }
+        
+        // === is for identical - same value and same type
+        if ( $first_name === 10 ){
+            echo " you are named 10?";
+        } else {
+            echo " You aren't 10";
+        }
+
+        echo $output;
         ?>
 
     </body>
