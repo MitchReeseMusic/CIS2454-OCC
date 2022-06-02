@@ -53,13 +53,11 @@ $annual_market_investments = filter_input(INPUT_GET, 'annual_market_investments'
             . "Market Investments: $current_market_investments";
         }
         $total_retirement_value = $current_bank_savings + $current_market_investments;
-        $total_retirement_value_adjusted_for_inflation = $total_retirement_value 
-                / pow(1.03, ($desired_retirement_age - $current_age));
-                
+        $total_retirement_value_adjusted_for_inflation = $total_retirement_value / pow(1.03, ($desired_retirement_age - $current_age));
+
         echo "</br>Total retirement value: $$total_retirement_value";
         echo "</br>Total retirement value adjusted for inflation: "
         . "$$total_retirement_value_adjusted_for_inflation";
-        
         ?>
     </body>
 </html>
