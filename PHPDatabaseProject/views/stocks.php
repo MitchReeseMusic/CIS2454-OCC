@@ -27,7 +27,7 @@
             <?php endforeach; ?>
         </table>
         </br>
-        <h2>Add Stock</h2>
+        <h2>Add or Update Stock</h2>
         <form action="stocks.php" method="post"> 
             <label>Symbol:</label> 
             <input type="text" name="symbol"/><br> 
@@ -35,27 +35,16 @@
             <input type="text" name="name"/><br> 
             <label>Current Price:</label> 
             <input type="text" name="current_price"/><br> 
-            <input type="hidden" name='action' value='insert'/>
+            <input type="hidden" name='action' value='insert_or_update'/>
+            <input type="radio" name="insert_or_update" value="insert" checked>Add</br>
+            <input type="radio" name="insert_or_update" value="update">Update</br>
             <label>&nbsp;</label>
-            <input type="submit" value="Add Stock"/> 
+            <input type="submit" value="Submit"/> 
         </form>
         </br>
-        <h2>Update Stock</h2>
-        <form action="stocks.php" method="post"> 
-            <label>Symbol:</label> 
-            <input type="text" name="symbol"/><br> 
-            <label>Name:</label> 
-            <input type="text" name="name"/><br> 
-            <label>Current Price:</label> 
-            <input type="text" name="current_price"/><br> 
-            <input type="hidden" name='action' value='update'/>
-            <label>&nbsp;</label>
-            <input type="submit" value="Update Stock"/> 
-        </form>
         <h2>Delete Stock</h2>
         <form action="stocks.php" method="post"> 
-            <label>Symbol:</label> 
-            <input type="text" name="symbol"/><br> 
+            <?php include("stockSymbolDropDown.php"); ?>
             <input type="hidden" name='action' value='delete'/>
             <label>&nbsp;</label>
             <input type="submit" value="Delete Stock"/> 
