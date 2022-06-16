@@ -1,5 +1,8 @@
 <?php
-    
+ 
+
+
+  
 try {
     require_once 'models/database.php';
     require_once 'models/stocks.php';
@@ -40,5 +43,3 @@ try {
 }
 
 ?>
-
-
