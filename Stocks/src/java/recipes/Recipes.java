@@ -1,3 +1,8 @@
+//Took the basis of this project from Eric's Github Repo
+//Modified as needed.
+//So I do not claim to have written the basis or the building blocks of this code
+//I have only written The Recipies, Recipie, and Ingredient classes.
+
 package recipes;
 
 import java.io.IOException;
